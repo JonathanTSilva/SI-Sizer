@@ -1,0 +1,4 @@
+{ "_id" : { "$oid" : "5e4a8b63f45c9f1e84cdc7b5" }, "ID" : "5", "qtde" : 11, "tensao" : "380", "icu" : "150", "cv" : "0.33", "tipo" : "Tipo 1", "modo" : "Direta", "classe" : "Normal (Classe 10)" }
+{ "_id" : { "$oid" : "5e4a97041f638d48c04dd70a" }, "ID" : "1", "qtde" : 3, "tensao" : "380", "icu" : "150", "cv" : "0.1", "tipo" : "Tipo 1", "modo" : "Direta", "classe" : "Normal (Classe 10)" }
+{ "_id" : { "$oid" : "5e4afb7d2dce0528284fff4f" }, "ID" : "34", "qtde" : 5, "tensao" : "380", "icu" : "150", "cv" : "0.75", "tipo" : "Tipo 2", "modo" : "Direta", "classe" : "Normal (Classe 10)" }
+{ "_id" : { "$oid" : "5e4bd3ca64c7cc30b80b36c5" }, "ID" : "125", "qtde" : 2, "tensao" : "380", "icu" : "150", "cv" : "10", "tipo" : "Tipo 2", "modo" : "Estrela-Triângulo", "classe" : "Normal (Classe 10)" }

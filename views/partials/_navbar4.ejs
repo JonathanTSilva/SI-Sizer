@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a id="alogo" class="navbar-brand" href="/"><img src="/images/simbIFSP.png" height="40" class="d-inline-block align-top" alt="">
+      Sizer</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item actived">
+        <a class="nav-link" href="/"><i class="fa fa-home" aria-hidden="true"></i>  Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/sizer"><i class="fa fa-tasks" aria-hidden="true"></i>  Sizer</a>
+      </li>
+      <% if(user){ %>
+        <li class="nav-item dropdown" id="user">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user" aria-hidden="true"></i>  <%= user.nome %>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Meu perfil</a>
+            <a class="dropdown-item" href="#"></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/usuario/logout">Logout</a>
+          </div>
+        </li>
+      <% } else { %>
+        <li class="nav-item" id="login">
+          <a class="nav-link" href="/usuario/login">Login</a>
+        </li>
+      <% }; %>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  var btnContainer = document.getElementById("active1");
+  var btns = btnContainer.getElementsByClassName("nav-item");
+
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      if (current.length > 0) {
+        current[0].className = current[0].className.replace(" active", "");
+      }
+      this.className += " active";
+    });
+  }
+</script>
+<script>
+    var login = document.getElementById("login")
+    var user = document.getElementById("user")
+
+    
+</script>

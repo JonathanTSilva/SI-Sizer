@@ -1,0 +1,40 @@
+<nav id="mynav2" style="background-Color: #23272B">
+    <div class="logo">
+        <a id="alogo" class="navbar-brand" href="/"><img src="/images/simbIFSP.png" height="40" class="d-inline-block align-top" alt="">
+            Sizer
+        </a>
+    </div>
+    <div class="menu">
+        <ul>
+            <li>
+                <a class="nav-link actived" href="#">Home</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#">Sobre</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#">Serviços</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#">Periódicos</a>
+            </li>
+            <% if(user){ %>
+                <li class="nav-item dropdown" id="user">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-user" aria-hidden="true"></i>  <%= user.nome %>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Meu perfil</a>
+                    <a class="dropdown-item" href="#"></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/usuario/logout">Logout</a>
+                  </div>
+                </li>
+              <% } else { %>
+                <li class="nav-item" id="login">
+                  <a class="nav-link" href="/usuario/login">Login</a>
+                </li>
+              <% }; %>
+        </ul>
+    </div>
+</nav>

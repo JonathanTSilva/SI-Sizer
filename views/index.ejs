@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <main http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title><%= title %></title>
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="/public/images/favicon-32x32.png">
+
+    <link rel='stylesheet' href='/css/styleNav.css'>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styleFooter.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div id="nav2">
+      <%- include partials/_navbar4.ejs %>
+    </div>
+
+    <div class="container">
+      <div class="card-body mt-04">
+
+        <h2 id="title"><%= title %></h2>
+
+        <hr>
+
+        <form id="theForm" action="query" method="GET">
+          <div id="cont1" class="con/tainer mt-04">
+            <div class="row">
+              <div id="col1" class="column col-sm-4">      
+                Tensão de operação [V]: <select class="custom-select mt-04" name="tensao" id="tensao">
+                  <option value="" selected disabled hidden>Selecione uma tensão:</option>
+                  <option value="-">-</option>
+                  <option value="220">220</option>
+                  <option value="380">380</option>
+                  <option value="440">440</option>
+                  <option value="690">690</option>
+                </select>
+                Nível de interrupção [kA]: <select class="custom-select mt-04" name="icu" id="icu">
+                  <option value="" selected disabled hidden>Selecione uma corrente:</option>
+                  <option value="-">-</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="8">8</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="35">35</option>
+                  <option value="36">36</option>
+                  <option value="40">40</option>
+                  <option value="42">42</option>
+                  <option value="45">45</option>
+                  <option value="50">50</option>
+                  <option value="55">55</option>
+                  <option value="60">60</option>
+                  <option value="65">65</option>
+                  <option value="70">70</option>
+                  <option value="75">75</option>
+                  <option value="80">80</option>
+                  <option value="85">85</option>
+                  <option value="100">100</option>
+                  <option value="150">150</option>
+                  <option value="200">200</option>
+                  <option value="N/A">N/A</option>
+                </select>
+                Potência [cv]: <select class="custom-select mt-04" name="cv" id="cv">
+                  <option value="" selected disabled hidden>Selecione uma potência:</option>
+                  <option value="-">-</option>
+                  <option value="0.1">0.10</option>
+                  <option value="0.16">0.16</option>
+                  <option value="0.2">0.20</option>
+                  <option value="0.25">0.25</option>
+                  <option value="0.33">0.33</option>
+                  <option value="0.5">0.50</option>
+                  <option value="0.75">0.75</option>
+                  <option value="1">1.00</option>
+                  <option value="1.5">1.50</option>
+                  <option value="2">2.00</option>
+                  <option value="3">3.00</option>
+                  <option value="4">4.00</option>
+                  <option value="5">5.00</option>
+                  <option value="6">6.00</option>
+                  <option value="7.5">7.50</option>
+                  <option value="10">10.00</option>
+                  <option value="12.5">12.50</option>
+                  <option value="15">15.00</option>
+                  <option value="20">20.00</option>
+                  <option value="25">25.00</option>
+                  <option value="28">28.00</option>
+                  <option value="30">30.00</option>
+                  <option value="40">40.00</option>
+                  <option value="50">50.00</option>
+                  <option value="55">55.00</option>
+                  <option value="60">60.00</option>
+                  <option value="75">75.00</option>
+                  <option value="100">100.00</option>
+                  <option value="125">125.00</option>
+                  <option value="150">150.00</option>
+                  <option value="175">175.00</option>
+                  <option value="200">200.00</option>
+                  <option value="215">215.00</option>
+                  <option value="250">250.00</option>
+                  <option value="270">270.00</option>
+                  <option value="300">300.00</option>
+                  <option value="340">340.00</option>
+                  <option value="385">385.00</option>
+                  <option value="400">400.00</option>
+                  <option value="420">420.00</option>
+                  <option value="480">480.00</option>
+                  <option value="490">490.00</option>
+                  <option value="540">540.00</option>
+                  <option value="550">550.00</option>
+                  <option value="625">625.00</option>
+                  <option value="760">760.00</option>
+                  <option value="780">780.00</option>
+                  <option value="850">850.00</option>
+                  <option value="875">875.00</option>
+                  <option value="965">965.00</option>
+                  <option value="980">980.00</option>
+                  <option value="1080">1080.00</option>
+                  <option value="1220">1220.00</option>
+                  <option value="1360">1360.00</option>
+                  <option value="1495">1495.00</option>
+                  <option value="1630">1630.00</option>
+                </select>
+                Coordenação e Proteção: <select class="custom-select mt-04" name="coord" id="coord">
+                  <option value="" selected disabled hidden>Selecione uma opção:</option>
+                  <option value="-">-</option>
+                  <option value="Tipo 1">Tipo 1</option>
+                  <option value="Tipo 2">Tipo 2</option>
+                  <option value="LI">LI</option>
+                  <option value="LSI">LSI</option>
+                  <option value="N/A">N/A</option>
+                </select>
+                Partida: <select class="custom-select mt-04" name="drive" id="drive">
+                  <option value="" selected disabled hidden>Selecione uma partida</option>
+                  <option value="-">-</option>
+                  <option value="Alimentador 3VL">Alimentador 3VL</option>
+                  <option value="Alimentador 3VT">Alimentador 3VT</option>
+                  <option value="Direta">Direta</option>
+                  <option value="Reversora">Reversora</option>
+                  <option value="Direta Reversora">Direta-Reversora</option>
+                  <option value="Simocode Direta">Simocode Direta</option>
+                  <option value="Simocode Reversora">Simocode Reversora</option>
+                  <option value="Estrela-Triangulo">Estrela-Triangulo</option>
+                  <option value="Inversor MM420">Inversor MM420</option>
+                  <option value="Inversor MM430">Inversor MM430</option>
+                  <option value="Inversor MM440">Inversor MM440</option>
+                  <option value="Soft Starter 3RW30">Soft Starter 3RW30</option>
+                  <option value="Soft Starter 3RW40">Soft Starter 3RW40</option>
+                  <option value="Soft Starter 3RW44">Soft Starter 3RW44</option>
+                </select>
+                Carga: <select class="custom-select mt-04" name="carga" id="carga">
+                  <option value="" selected disabled hidden>Selecione uma carga:</option>
+                  <option value="-">-</option>
+                  <option value="Leve">Leve</option>
+                  <option value="Normal (Classe 10)">Normal (Classe 10)</option>
+                  <option value="Pesada">Pesada</option>
+                  <option value="Pesada (Classe 20)">Pesada (Classe 20)</option>
+                  <option value="Muito pesada (Classe 30)">Muito Pesada (Classe 30)</option>
+                  <option value="-">(Vazio)</option>
+                </select>
+                
+                <div class='wrapper text-center'>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <div class="btnConsultar">
+                      <button class="btn btn-success mt-2 justify-content-center" id="btnConsultar" type="submit">
+                        <i class="fa fa-search"></i> Consultar
+                      </button>
+                    </div>
+                    <div class="btnReset">
+                      <button class="btn btn-default mt-2" type="reset">
+                        <i class="fa fa-trash"></i>
+                      </button>
+                      <span class="glyphicon glyphicon-print"></span>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div id="col2" class="column col-sm-8">
+                <b> Escolhas:</b>
+                <div class="table-container">
+                  <table class="table mt-04 table-striped table-sm table-responsive">
+                    <thead class="thead-dark">
+                        <tr align="center">
+                          <th class="align-middle" scope="col">Qntd.</th>
+                          <th class="align-middle" scope="col">Tensão</th>
+                          <th class="align-middle" scope="col">ICU</th>
+                          <th class="align-middle" scope="col">Potência[cv]</th>
+                          <th class="align-middle" scope="col">Tipo</th>
+                          <th class="align-middle" scope="col">Modo</th>
+                          <th class="align-middle" scope="col">Classe</th>
+                          <th class="align-middle" scope="col">
+                            <a href="/deleteAll" onclick="return confirm('Tem certeza que deseja excluir todas?');"><i class="fa fa-trash"></i></a>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <% escolhas.forEach(function(escolha){ %>
+                        <tr align="center">
+                          <td class="align-middle" scope="row"><a href="/edit/<%= escolha._id %>"><%= escolha.qtde %></a></td>
+                          <td class="align-middle"><a href="/edit/<%= escolha._id %>"><%= escolha.tensao %></a></td>
+                          <td class="align-middle"><a href="/edit/<%= escolha._id %>"><%= escolha.icu %></a></td>
+                          <td class="align-middle"><a href="/edit/<%= escolha._id %>"><%= escolha.cv %></a></td>
+                          <td class="align-middle"><a href="/edit/<%= escolha._id %>"><%= escolha.tipo %></a></td>
+                          <td class="align-middle"><a href="/edit/<%= escolha._id %>"><%= escolha.modo %></a></td>
+                          <td class="align-middle"><a href="/edit/<%= escolha._id %>"><%= escolha.classe %></a></td>
+                          <td class="align-middle"><a href="/delete/<%= escolha._id %>" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?');">
+                            <i class="fa fa-trash"></i></a></td>
+                        </tr>
+                          <% }) %>
+                      </tbody>
+                  </table>
+                  <p>Itens escolhidos: <%= escolhas.length %></p>
+                </div>
+
+                <div class='wrapper text-center'>
+                  <div class="btn-group" role="group" aria-label="1bt">
+                    <div class="btnRelatorio">
+                      <a href="/relatorio" class="btn btn-success"><i class="fa fa-list-ol" aria-hidden="true"></i> Relatório</a>
+                    </div>
+                  </div>
+                  <div class="btn-group" role="group" aria-label="2bt">
+                    <div class="btnMateriais">
+                      <a href="/materiais" class="btn btn-success"><i class="fa fa-list" aria-hidden="true"></i> Lista de Materiais</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </p>
+
+        </form>
+
+  <hr/>
+
+    <p>Itens disponíveis: <%= partidas.length %></p>
+                <div class="table-container2">
+                  <table id="myTable" class="table mt-04 table-striped table-bordered table-sm table-responsive">
+                    <thead class="thead-dark">
+                      <tr align="center">
+                        <th class="align-middle" scope="col">#</th>
+                        <th class="align-middle" scope="col">Tensão (V)</th>
+                        <th class="align-middle" scope="col">Nivel de Interrução (kA)</th>
+                        <th class="align-middle" scope="col">Potência (kW)</th>
+                        <th class="align-middle" scope="col">Potência (cv)</th>
+                        <th class="align-middle" scope="col">Corrente (A)</th>
+                        <th class="align-middle" scope="col">Coord./Proteção</th>
+                        <th class="align-middle" scope="col">Partida</th>
+                        <th class="align-middle" scope="col">Carga</th>
+                        <th class="align-middle" scope="col">ID</th>
+                      </tr>
+                    </thead>
+                    <!--<% var i = 1; %><%= i %><% i++; %>-->
+                    <tbody id="myTableBody">
+                      <% partidas.forEach(function(partida){ %>
+                      <tr align="center" valign="middle" id="bd1">
+                          <th scope="row"><a href="/new/<%= partida._id %>">+</a></th>
+                          <td><%= partida.V %></td>
+                          <td><%= partida.kA %></td>
+                          <td><%= partida.kW %></td>
+                          <td><%= partida.cv %></td>
+                          <td><%= partida.A %></td>
+                          <td><%= partida.Tipo %></td>
+                          <td><%= partida.Modo %></td>
+                          <td><%= partida.Classe %></td>
+                          <td><%= partida.ID %></td>
+                      </tr>
+                      <% }) %>
+                    </tbody>
+                  </table>
+                  <p align="center" valign="middle" id="bd2">Nenhum item encontrado.</p>
+                </div>
+
+          <hr />
+
+      </div>
+    </div>
+  </div>
+    <footer class="text-md-left text-center p-4 bg-dark text-light">
+      <div class="container">
+        <div class="row">
+          <div class="my-3 col-lg-4 col-md-6">
+            <h3><img src="/images/simbIFSP.png" alt="" height="35"> Instituto Federal</h3>
+            
+            <p class="text-muted">20/Fev, 2020</p>
+            <p class="my-3">
+              <a href="https://www.google.it/maps/place/Instituto+Federal+de+Educa%C3%A7%C3%A3o,+Ci%C3%AAncia+e+Tecnologia+de+S%C3%A3o+Paulo/@-21.1441369,-47.9806021,15z/data=!4m13!1m7!3m6!1s0x89c259a9aeb1c6b5:0x35b1cfbc89a6097f!2sEmpire+State+Building,+New+York,+NY+10001,+Stati+Uniti!3b1!8m2!3d40.7485413!4d-73.9857577!3m4!1s0x94b998e28013e411:0xb70cd92186b6105c!8m2!3d-21.1432954!4d-47.9729819?hl=it" target="blank" class="text-muted">R. Américo Ambrósio, 269 - Jardim Canaa,
+                <br>Sertãozinho, São Paulo - 14169-263</a>
+            </p>
+            <a class="btn btn-lg btn-success" href="https://srt.ifsp.edu.br/">Visite nosso site</a>
+          </div>
+          <div class="my-3 col-lg-4 col-md-6">
+            <h3>Entrar em contato</h3>
+            <form>
+              <fieldset class="form-group my-3">
+                <input type="email" class="form-control" id="Input Email" placeholder="Email"> </fieldset>
+              <fieldset class="form-group my-3">
+                <input type="message" class="form-control" id="Input Message" placeholder="Message"> </fieldset>
+              <button type="submit" class="btn btn-outline-success">Enviar</button>
+            </form>
+          </div>
+          <div class="col-lg-1"> </div>
+          <div class="my-3 col-lg-3">
+            <h3>Seguir</h3>
+            <a href="https://m.facebook.com/ifsp.sertaozinho/" target="blank"><i class="fa fa-facebook-square text-muted fa-3x m-2"></i></a>
+            <a href="https://www.instagram.com/ifspsrt/" target="blank"><i class="fa fa-3x fa-instagram text-muted m-2"></i></a>
+            <a href="https://mobile.twitter.com/ifsaopaulo/with_replies" target="blank"><i class="fa fa-3x fa-twitter m-2 text-muted"></i></a>
+            <a href="https://www.youtube.com/user/ifspoficial" target="blank"><i class="fa fa-3x text-muted fa-youtube-play m-2"></i></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-muted">© Copyright 2020 IFSP
+              <br> Todos os direitos reservados. </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    //FUNÇÃO QUE ENTRA LOGO QUANDO CARREGA A PÁGINA
+      ( function($) {
+        $(function() {
+          iMasters.refresh();
+        });
+        var iMasters = {
+          refresh : function() {
+            //Função que dá refresh na página apenas uma vez na primeira vez
+            if( window.localStorage )
+            {
+              if( !localStorage.getItem('firstLoad') )
+              {
+                localStorage['firstLoad'] = true;
+                window.location.reload();
+              }  
+              else
+                localStorage.removeItem('firstLoad');
+            }
+            iMasters.empty();
+          },
+          empty : function() {
+            var tbl = document.getElementById('myTable');
+            var rows = tbl.querySelectorAll('tbody tr');
+            var tbody1 = document.getElementById('bd1');
+            var tbody2 = document.getElementById('bd2');
+
+            if(rows.length == 0) {
+                tbody1.classList.add('hide');
+                tbody2.classList.remove('hide');
+            } else {
+                tbody1.classList.remove('hide');
+                tbody2.classList.add('hide');
+            }
+          }
+        };
+      })(jQuery);
+    </script>
+  <script type="text/javascript">
+    var $th = $('.table-container2').find('thead th')
+    $('.table-container2').on('scroll', function() {
+      $th.css('transform', 'translateY('+ this.scrollTop +'px)');
+    });
+  </script>
+  <script>
+    var btnContainer = document.getElementById("active1");
+    var btns = btnContainer.getElementsByClassName("nav-item");
+
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        if (current.length > 0) {
+          current[0].className = current[0].className.replace(" active", "");
+        }
+        this.className += " active";
+      });
+    }
+  </script>
+  <script>
+    var url_string = window.location.href
+    var url = new URL(url_string);
+
+    var var1 = url.searchParams.get("tensao");
+    var var2 = url.searchParams.get("icu");
+    var var3 = url.searchParams.get("cv");
+    var var4 = url.searchParams.get("coord");
+    var var5 = url.searchParams.get("drive");
+    var var6 = url.searchParams.get("carga");
+
+    var isNull = (value) => value === null
+
+    var tensao = isNull(var1)? "" : var1;
+    var icu = isNull(var2)? "" : var2;
+    var cv = isNull(var3)? "" : var3;
+    var coord = isNull(var4)? "" : var4;
+    var drive = isNull(var5)? "" : var5;
+    var carga = isNull(var6)? "" : var6;
+    
+    document.getElementById("tensao").value = tensao;
+    document.getElementById("icu").value = icu;
+    document.getElementById("cv").value = cv;
+    document.getElementById("coord").value = coord;
+    document.getElementById("drive").value = drive;
+    document.getElementById("carga").value = carga;
+
+  </script>
+  <script>
+
+  </script>
+</html>
+

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <main http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/styleNav.css'>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styleFooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+
+  </head>
+  <body>
+    
+    <header id="nav1">
+        <%- include partials/_navbar.ejs %>
+    </header>
+
+    <header id="nav2">
+      <%- include partials/_navbar3.ejs %>
+    </header>
+
+    <div id="alerts">
+      <div id="errorAlert">
+        <% if (error) {%>
+          <div class="alert alert-danger alert-server" id="error"><%= error %></div>
+        <% }%>
+      </div>
+      <div id="msgAlert">
+        <%- include partials/_msg.ejs %>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="card-body mt-04">
+
+        <div class="row">
+          <div class="col-md-1">
+            <h2 id="title"><%= title %></h2>
+          </div>
+          <div class="col-md-11">
+            <a class="btn btn-success" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <i class="fa fa-angle-double-down"></i> Como usar nosso site?
+            </a>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="collapse" id="collapseExample">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card shadow bg-white rounded" style="height: 23rem;">
+                    <img class="card-img-top" src="/images/registro.jpg" height="150px" alt="" >
+                    <div class="card-body">
+                      <h5 class="card-title">Registro</h5>
+                      <p class="card-text text-justify">Primeiramente, é necessário o registro e o login para acessar nossa ferramenta.</p>
+                    </div>
+                    <div class="card-footer">
+                      <a href="/usuario/registro" class="btn btn-success">Registrar-se</a>
+                      ou
+                      <a href="/usuario/login" class="btn btn-success">Entrar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card shadow bg-white rounded" style="height: 23rem;">
+                    <img class="card-img-top" src="/images/sizerbtn.jpg" height="150px" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Sizer</h5>
+                      <p class="card-text text-justify">Acesse nossa ferramenta de dimensionamento clicando em "SIZER" na barra de navegação.</p>
+                    </div>
+                    <div class="card-footer">
+                      <a href="/usuario/registro" class="btn btn-success">Sizer</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card shadow bg-white rounded" style="height: 23rem;">
+                    <img class="card-img-top" src="/images/form.jpg" height="150px" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Formulário</h5>
+                      <p class="card-text text-justify">
+                        Ao acessar, preencha o formulário com os dados da rede de alimentação (tensão de operação e nível de interrupção), potência do motor, tipo de partida e carga a ser acionada, de todos os motores que compõem um novo projeto.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card shadow bg-white rounded" style="height: 23rem;">
+                    <img class="card-img-top" src="/images/cad.jpg" height="150px" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Cadastrar partida</h5>
+                      <p class="card-text text-justify">
+                        A ferramenta filtrará as opções em uma tabela abaixo do formulário. Escolha a sua partida e clique no botão "+" ao lado esquerdo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card shadow bg-white rounded" style="height: 23rem;">
+                    <img class="card-img-top" src="/images/add.jpg" height="150px" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Adição</h5>
+                      <p class="card-text text-justify">
+                        Será aberta uma página para a adição da partida, na qual deve ser alterado a quantidade de acordo com a necessidade do usuário.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card shadow bg-white rounded" style="height: 23rem;">
+                    <img class="card-img-top" src="/images/escolhas.jpg" height="150px" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Escolhas</h5>
+                      <p class="card-text text-justify">
+                        Todas as partidas adicionadas são apresentadas em uma tabela ao lado do formulário. Ali, há a opção de editá-las ou remove-las de sua lista.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card shadow bg-white rounded" style="height: 23rem;">
+                    <img class="card-img-top" src="/images/rel.jpg" height="150px" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Resultados</h5>
+                      <p class="card-text text-justify">
+                        Cadastrado todas as partidas que necessita, obtêm-se os resultados clicando em qualquer um dos dois botões abaixo da lista de escolhas.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card shadow bg-white rounded" style="height: 23rem;">
+                    <img class="card-img-top" src="/images/relat.jpg" height="150px" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Relatório</h5>
+                      <p class="card-text text-justify">
+                        Se optar pela opção "Relatório", seus resultados são exibidos em uma tabela junto com a configuração de sua respectiva partida. Além disso, há a possibilidade da geração de um arquivo PDF do seu relatório.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card shadow bg-white rounded" style="height: 23rem;">
+                    <img class="card-img-top" src="/images/mat.jpg" height="150px" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Lista de Materiais</h5>
+                      <p class="card-text text-justify">
+                        Na opção "Lista de Materiais", todos os materiais são apresentados juntos em uma tabela. Além disso, há a possibilidade da geração de um arquivo PDF da sua lista.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="jumbotron shadow">
+          <h1 class="display-4">Seja bem-vindo!</h1>
+          <p class="lead">Este site foi criado com o intuito de apoiar engenheiros de projeto no desenvolvimento de sistemas
+            elétricos industriais, buscando a otimização de tempo para dimensionamento da lista
+            de peças para projeto de painéis elétricos para acionamentos de motores.</p>
+          <hr class="my-4">
+          <p>O dimensionamento de circuitos elétricos, é de grande importância nas
+            fases conceituais e básicas de desenvolvimento, tornando imprescindível boa
+            análise, avaliação, e cálculos para que seja...</p>
+          <p class="lead">
+            <a class="btn btn-success btn-lg" href="/relatoriofinal" role="button">Leia mais</a>
+          </p>
+        </div>
+
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 id="h21"><i class="fa fa-caret-right"></i> Esquemas Elétricos</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              Para as partidas utilizadas na ferramenta SIZER, foram considerados os seguintes esquemas:
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="accordion" id="accordionExample">
+
+          <div class="card">
+            <div class="card-header shadow" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" id="collapseBtn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Partida direta
+                </button>
+              </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <!--<h3 class="mb-0"><b>Resumo</b></h3>-->
+                <div class="row">
+                  <div class="col-md-9">
+                    <img src="/images/esq1.jpg" height="400">
+                  </div>
+                  <div class="col-md-3">
+                    <b>Legenda</b>
+
+                    <ul>
+                      <li>Q1 - Disjuntor</li>
+                      <li>K1 - Contator</li>
+                      <li>S0 - Botão desliga</li>
+                      <li>S1 - Botão liga</li>
+                      <li>M1 - Motor</li>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <small>Para informações acesse: <a href="http://www.siemens.com.br/sirius">siemens.com.br/sirius</a></small>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header shadow" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" id="collapseBtn" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Partida direta reversora
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" id="collapseBtn" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-md-9">
+                    <img src="/images/esq2.jpg" height="400">
+                  </div>
+                  <div class="col-md-3">
+                    <b>Legenda</b>
+
+                    <ul>
+                      <li>Q1 - Disjuntor</li>
+                      <li>K1 - Contator</li>
+                      <li>K2 - Contator</li>
+                      <li>S0 - Botão desliga</li>
+                      <li>S1 - Botão liga</li>
+                      <li>S2 - Botão comutador</li>
+                      <li>M1 - Motor</li>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <small>Para informações acesse: <a href="http://www.siemens.com.br/sirius">siemens.com.br/sirius</a></small>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header shadow" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" id="collapseBtn" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Partida estrela-triâgulo
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-md-9">
+                    <img src="/images/esq3.jpg" height="400">
+                  </div>
+                  <div class="col-md-3">
+                    <b>Legenda</b>
+
+                    <ul>
+                      <li>Q1 - Disjuntor</li>
+                      <li>K1 - Contator</li>
+                      <li>K2 - Contator</li>
+                      <li>K3 - Contator</li>
+                      <li>F1 - Relé de sobrecarga</li>
+                      <li>K6 - Relé de tempo</li>
+                      <li>S0 - Botão desliga</li>
+                      <li>S1 - Botão liga</li>
+                      <li>M1 - Motor</li>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <small>Para informações acesse: <a href="http://www.siemens.com.br/sirius">siemens.com.br/sirius</a></small>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header shadow" id="headingFour">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" id="collapseBtn" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Partida simocode direta
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-md-9">
+                    <img src="/images/esq4.jpg" height="400">
+                  </div>
+                  <div class="col-md-3">
+                    <b>Legenda</b>
+
+                    <ul>
+                      <li>Q1 - Disjuntor</li>
+                      <li>K1 - Contator</li>
+                      <li>F1 - Módulo transformador de corrente</li>
+                      <li>S0 - Botão desliga</li>
+                      <li>S1 - Botão liga</li>
+                      <li>S2 - Botão comutador</li>
+                      <li>M1 - Motor</li>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <small>Para informações acesse: <a href="http://www.siemens.com.br/simocode">siemens.com.br/simocode</a></small>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header shadow" id="headingFive">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" id="collapseBtn" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Partida simocode reversora
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-md-9">
+                    <img src="/images/esq5.jpg" height="400">
+                  </div>
+                  <div class="col-md-3">
+                    <b>Legenda</b>
+
+                    <ul>
+                      <li>Q1 - Disjuntor</li>
+                      <li>K1 - Contator</li>
+                      <li>K2 - Contator</li>
+                      <li>F1 - Módulo transformador de corrente</li>
+                      <li>S0 - Botão desliga</li>
+                      <li>S1 - Botão liga</li>
+                      <li>S2 - Botão comutador</li>
+                      <li>S3 - Botão liga</li>
+                      <li>M1 - Motor</li>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <small>Para informações acesse: <a href="http://www.siemens.com.br/simocode">siemens.com.br/simocode</a></small>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header shadow" id="headingSix">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" id="collapseBtn" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  Partida suave 3RW30 (Soft starter)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-md-9">
+                    <img src="/images/esq6.jpg" height="400">
+                  </div>
+                  <div class="col-md-3">
+                    <b>Legenda</b>
+
+                    <ul>
+                      <li>Q1 - Disjuntor</li>
+                      <li>Q11 - Soft starter</li>
+                      <li>S1 - Botão desliga</li>
+                      <li>S2 - Botão liga</li>
+                      <li>M1 - Motor</li>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <small>Para informações acesse: <a href="http://www.siemens.com.br/softstarters">siemens.com.br/softstarters</a></small>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header shadow" id="headingSeven">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" id="collapseBtn" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  Partida suave 3RW40 (Soft starter)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-md-9">
+                    <img src="/images/esq7.jpg" height="400">
+                  </div>
+                  <div class="col-md-3">
+                    <b>Legenda</b>
+
+                    <ul>
+                      <li>Q1 - Disjuntor</li>
+                      <li>Q11 - Soft starter</li>
+                      <li>S1 - Botão desliga</li>
+                      <li>S2 - Botão liga</li>
+                      <li>M1 - Motor</li>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <small>Para informações acesse: <a href="http://www.siemens.com.br/softstarters">siemens.com.br/softstarters</a></small>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header shadow" id="headingEight">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" id="collapseBtn" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  Partida suave 3RW44 (Soft starter)
+                </button>
+              </h2>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-md-9">
+                    <img src="/images/esq8.jpg" height="400">
+                  </div>
+                  <div class="col-md-3">
+                    <b>Legenda</b>
+
+                    <ul>
+                      <li>Q1 - Disjuntor</li>
+                      <li>G1 - Soft starter</li>
+                      <li>S0 - Botão desliga</li>
+                      <li>S1 - Botão liga</li>
+                      <li>S2 - Botão RESET</li>
+                      <li>M1 - Motor</li>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <small>Para informações acesse: <a href="http://www.siemens.com.br/softstarters">siemens.com.br/softstarters</a></small>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header shadow" id="headingNine">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" id="collapseBtn" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  Partida com inversor de frequência Micromaster
+                </button>
+              </h2>
+            </div>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-md-9">
+                    <img src="/images/esq9.jpg" height="400">
+                  </div>
+                  <div class="col-md-3">
+                    <b>Legenda</b>
+
+                    <ul>
+                      <li>Q1 - Seccionadora</li>
+                      <li>INV1 - Inversor</li>
+                      <li>M1 - Motor</li>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <small>Para informações acesse: <a href="http://www.siemens.com.br/micromaster">siemens.com.br/micromaster</a></small>
+              </div>
+            </div>
+          </div>
+
+          <!--<div class="card">
+            <div class="card-header" id="headingTen">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  Alimentador
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-md-9">
+                    <img src="/images/esq10.jpg" height="400">
+                  </div>
+                  <div class="col-md-3">
+                    <b>Legenda</b>
+
+                    <ul>
+                      <li>Q1 - Disjuntor</li>
+                      <li>K1 - Contator</li>
+                      <li>S0 - Botão desliga</li>
+                      <li>S1 - Botão liga</li>
+                      <li>M1 - Motor</li>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <small>Para informações acesse: <a href="http://www.siemens.com.br/sirius">siemens.com.br/sirius</a></small>
+
+            </div>
+          </div>-->
+
+
+
+        </div>
+
+
+
+        <div class="py-5" id="speakers">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 id="h21"><i class="fa fa-caret-right"></i> Nossa equipe</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-lg-3 animate-in-left">
+                <a href="http://lattes.cnpq.br/9250303731873766">
+                  <img src="/images/perfil1.1.jpg" class="center-block img-fluid my-3 rounded-circle shadow-lg bg-white" width="200">
+                  <h3 class="mb-0"><b>Jonathan Tobias</b></h3>
+                  <p class="text-muted">Desenvolvedor</p>
+                </a>
+              </div>
+              <div class="col-6 col-lg-3">
+                <a href="http://lattes.cnpq.br/9036034274265658">
+                  <img src="/images/perfil2.jpg" class="center-block img-fluid my-3 rounded-circle shadow-lg bg-white" width="200">
+                  <h3 class="mb-0"><b>André Luis</b></h3>
+                  <p class="text-muted">Desenvolvedor</p>
+                </a>
+              </div>
+              <div class="col-6 col-lg-3">
+                <a href="http://lattes.cnpq.br/6301414150789957">
+                  <img src="/images/perfil3.jpg" class="center-block img-fluid my-3 rounded-circle shadow-lg bg-white" width="200">
+                  <h3 class="mb-0"><b>Afonso Turcato</b></h3>
+                  <p class="text-muted">Desenvolvedor</p>
+                </a>
+              </div>
+              <div class="col-6 col-lg-3 animate-in-right">
+                <a href="http://lattes.cnpq.br/6630816751422162">
+                  <img src="/images/perfil4.jpg" class="center-block img-fluid my-3 rounded-circle shadow-lg bg-white" width="200">
+                  <h3 class="mb-0"><b>Nemésio Freitas</b></h3>
+                  <p class="text-muted">Desenvolvedor</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  <footer class="text-md-left text-center p-4 bg-dark text-light">
+    <div class="container">
+      <div class="row">
+        <div class="my-3 col-lg-4 col-md-6">
+          <h3><img src="/images/simbIFSP.png" alt="" height="35"> Instituto Federal</h3>
+          
+          <p class="text-muted">20/Fev, 2020</p>
+          <p class="my-3">
+            <a href="https://www.google.it/maps/place/Instituto+Federal+de+Educa%C3%A7%C3%A3o,+Ci%C3%AAncia+e+Tecnologia+de+S%C3%A3o+Paulo/@-21.1441369,-47.9806021,15z/data=!4m13!1m7!3m6!1s0x89c259a9aeb1c6b5:0x35b1cfbc89a6097f!2sEmpire+State+Building,+New+York,+NY+10001,+Stati+Uniti!3b1!8m2!3d40.7485413!4d-73.9857577!3m4!1s0x94b998e28013e411:0xb70cd92186b6105c!8m2!3d-21.1432954!4d-47.9729819?hl=it" target="blank" class="text-muted">R. Américo Ambrósio, 269 - Jardim Canaa,
+              <br>Sertãozinho, São Paulo - 14169-263</a>
+          </p>
+          <a class="btn btn-lg btn-success" href="https://srt.ifsp.edu.br/">Visite nosso site</a>
+        </div>
+        <div class="my-3 col-lg-4 col-md-6">
+          <h3>Entrar em contato</h3>
+          <form>
+            <fieldset class="form-group my-3">
+              <input type="email" class="form-control" id="Input Email" placeholder="Email"> </fieldset>
+            <fieldset class="form-group my-3">
+              <input type="message" class="form-control" id="Input Message" placeholder="Message"> </fieldset>
+            <button type="submit" class="btn btn-outline-success">Enviar</button>
+          </form>
+        </div>
+        <div class="col-lg-1"> </div>
+        <div class="my-3 col-lg-3">
+          <h3>Seguir</h3>
+          <a href="https://m.facebook.com/ifsp.sertaozinho/" target="blank"><i class="fa fa-facebook-square text-muted fa-3x m-2"></i></a>
+          <a href="https://www.instagram.com/ifspsrt/" target="blank"><i class="fa fa-3x fa-instagram text-muted m-2"></i></a>
+          <a href="https://mobile.twitter.com/ifsaopaulo/with_replies" target="blank"><i class="fa fa-3x fa-twitter m-2 text-muted"></i></a>
+          <a href="https://www.youtube.com/user/ifspoficial" target="blank"><i class="fa fa-3x text-muted fa-youtube-play m-2"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="text-muted">© Copyright 2020 IFSP
+            <br> Todos os direitos reservados. </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    //FUNÇÃO QUE ENTRA LOGO QUANDO CARREGA A PÁGINA
+    ( function($) {
+      $(function() {
+        iMasters.refresh();
+      });
+      var iMasters = {
+        refresh : function() {
+          //Função que dá refresh na página apenas uma vez na primeira vez
+          $(document).ready(function() {
+
+            $('.collapse').on('shown.bs.collapse', function () {
+                $(this).parent().addClass('active');
+            });
+
+            $('.collapse').on('hidden.bs.collapse', function () {
+                $(this).parent().removeClass('active');
+            });
+
+          });
+        }
+      };
+    })(jQuery);
+
+
+      var nav = document.querySelector('nav'); // Identify target
+
+      window.addEventListener('scroll', function(event) { // To listen for event
+          event.preventDefault();
+
+          if (window.scrollY <= 50) { // Just an example
+              nav.style.backgroundColor = 'transparent'; // or default color
+          } else {
+              nav.style.backgroundColor = '#23272B';
+          }
+      });
+
+        var header1 = document.getElementById('nav1');
+        var header2 = document.getElementById('nav2');
+
+        if ($(window).width() < 930) {
+            header1.classList.add('hide')
+            header2.classList.remove('hide')
+        }
+        else {
+            header1.classList.remove('hide')
+            header2.classList.add('hide')
+        }
+
+  </script>
+  
+</html>
