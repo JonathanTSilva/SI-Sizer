@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <h1 align="center">
   <br>
-  <a href="https://github.com/JonathanTSilva/SI-Sizer"><img src="./Images/logo-cavitation.png" alt="Logo" width="200"></a>
+  <a href="https://github.com/JonathanTSilva/SI-Sizer"><img src="https://lh3.googleusercontent.com/proxy/F5n7dnrXw0ow1gM1HbQt0VfIMmuiBG48NpNuQsGiT0pwaLoo6U2oYDPqF0pJ5IZ9QR-3eMb64obgCcvF4BR9-hjelEdnvCoqHg" alt="Logo" width="200"></a>
   <br>
   Scientific Iniciation - Sizer
   <br>
