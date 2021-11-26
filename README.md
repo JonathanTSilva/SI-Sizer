@@ -46,6 +46,10 @@
 Electric motors play an important role in driving machines for industrial processes of various market segments. Optimizing the time of engineers which work on selecting equipment for electric motor drives is the main objective of this work. Using NodeJS platform, a web application is formulated which collects data concerning low-voltage network (operating voltage and rated breaking capacity), motor power, type of circuit diagrams and driven load, from all motors of a new project. Using an algorithm, it provides the complete list of components required to drives circuit, project and additionally, information in a report. The results shown turned possible to provide the developed tool online to engineers and technology students.
 
 ![Page1][page1]
+<br>
+![Page2][page2]
+<br>
+![Page3][page3]
 
 ## Getting Started
 
@@ -70,8 +74,11 @@ Distributed under the MIT License. See [LICENSE](https://github.com/JonathanTSil
 Project Link: [JonathanTSilva/SI-Sizer](https://github.com/JonathanTSilva/SI-Sizer)
 
 <!-- MARKDOWN LINKS & IMAGES -->
+[page1]: Images/page1.png
+[page2]: Images/page2.png
+[page3]: Images/page3.png
+
 <!-- Caso utilize as imagens em markdown, sempre seguir este padrão!-->
-[page1]: ./Images/logo-ifsp2.png
 <!--
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
