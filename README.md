@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <h1 align="center">
   <br>
-  <a href="http://sizer.ti.srt.ifsp.edu.br/"><img src="https://lh3.googleusercontent.com/proxy/F5n7dnrXw0ow1gM1HbQt0VfIMmuiBG48NpNuQsGiT0pwaLoo6U2oYDPqF0pJ5IZ9QR-3eMb64obgCcvF4BR9-hjelEdnvCoqHg" alt="Logo" width="200"></a>
+  <a href="http://sizer.ti.srt.ifsp.edu.br/"><img src="https://www.electricmotorengineering.com/files/2018/12/ElectricMotor-1024x560.jpg" alt="Logo" width="200"></a>
   <br>
   Scientific Iniciation - Sizer
   <br>
