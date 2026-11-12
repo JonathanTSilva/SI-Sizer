@@ -1,3 +1,8 @@
+<!-- archive-banner:start -->
+> [!NOTE]
+> **This repository is archived.** It is read-only and no longer maintained. It is kept as a record of the work.
+<!-- archive-banner:end -->
+
 <!-- PROJECT LOGO -->
 <h1 align="center">
   <br>
